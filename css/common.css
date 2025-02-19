@@ -16,32 +16,24 @@ body {
 .gallery {
   list-style: none;
   background-color: #fff;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 48px;
-  width: 100%;
-  max-width: 1440px;
-  height: auto;
+  margin: 0 auto;
   padding: 100px 156px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+  width: 1440px;
 }
 
-.gallery-section {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-  width: 1128px;
+.gallery-item {
+  width: 360px;
   height: 300px;
-  flex-shrink: 0;
 }
 
 .gallery-image {
-  width: 360px;
-  height: 300px;
-  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 #name-input {

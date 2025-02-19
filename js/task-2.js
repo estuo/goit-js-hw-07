@@ -27,14 +27,11 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
-let markup = '';
-for (let i = 0; i < images.length; i += 3) {
-  const chunk = images
-    .slice(i, i + 3)
-    .map(
-      ({ url, alt }) => `<img class="gallery-image" src="${url}" alt="${alt}">`
-    )
-    .join('');
-  markup += `<li class="gallery-section">${chunk}</li>`;
-}
+const markup = images
+  .map(
+    ({ url, alt }) =>
+      `<li class="gallery-item"><img class="gallery-image" src="${url}" alt="${alt}"></li>`
+  )
+  .join('');
+
 gallery.insertAdjacentHTML('beforeend', markup);
